@@ -1,6 +1,24 @@
 # RESTful api #
 
-Proyecto open source con que utilizá la información pública del Gobierno de Chile
+Proyecto open source que utilizá la información pública del Gobierno de Chile
+
+## Instalación ##
+
+Para instalar primero es necesario clonar el repositorio
+
+    $ git clone https://github.com/Elecciones2016/API.git
+    
+Luego, hay que instalar los modulos de node en la carpeta del proyecto
+
+    $ npm install
+    
+Y listo!
+
+## Ejecutar aplicación ##
+
+Para ejecutar la aplicación, hay que correr el servidor node, en el directorio raiz del proyecto
+
+    $ node app.js
 
 ### Politicos ###
 
