@@ -1,0 +1,25 @@
+{
+  "name": "api_elecciones",
+  "version": "1.0.0",
+  "description": "Proyecto open source con que utilizá la información pública del Gobierno de Chile",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.1.8",
+    "pg": "^4.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elecciones2016/API.git"
+  },
+  "author": "@YerkoPalma, @vhenriquez1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elecciones2016/API/issues"
+  },
+  "homepage": "https://github.com/Elecciones2016/API"
+}
