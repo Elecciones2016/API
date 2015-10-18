@@ -23,40 +23,58 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
 
 ### Senadores ###
 
-| **URI** | **Request body ** |
-| ------- | ----------------- |
-| `GET /senadores/` |    [
-                          {
-                            "nombre" : String,
-                            "rut" : Integer,
-                            "region" : "String",
-                            "circunscripcion" : Integer,
-                            "telefono" : String,
-                            "mail" : String,
-                            "partido": {
-                              "nombre" : String,
-                              "siglas" : String,
-                              "codigo" : Integer
-                            },
-                            "asistencia" : Integer,
-                            "comisiones" : [
-                              {
-                                "nombre" : String,
-                                "tipo" : String,
-                                "fecha" : Date
-                              }
-                            ],
-                            "votos" : [
-                              {
-                                "fecha" : String,
-                                "tema" : String,
-                                "voto" : String,
-                                "partido" : String
-                              }
-                            ],
-                            "sueldo" : Integer
-                          }
-                        ] |
+<table>
+  <tr>
+    <th>
+      URI
+    </th>
+    <th>
+      Request body
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/</pre>
+    </td>
+    <td>
+      <pre>
+      [
+        {
+          "nombre" : String,
+          "rut" : Integer,
+          "region" : "String",
+          "circunscripcion" : Integer,
+          "telefono" : String,
+          "mail" : String,
+          "partido": {
+            "nombre" : String,
+            "siglas" : String,
+            "codigo" : Integer
+          },
+          "asistencia" : Integer,
+          "comisiones" : [
+            {
+              "nombre" : String,
+              "tipo" : String,
+              "fecha" : Date
+            }
+          ],
+          "votos" : [
+            {
+              "fecha" : String,
+              "tema" : String,
+              "voto" : String,
+              "partido" : String
+            }
+          ],
+          "sueldo" : Integer
+        }
+      ]
+      </pre>
+    </td>
+  </tr>
+</table>
+
 
 
 - `/senadores/:id`
