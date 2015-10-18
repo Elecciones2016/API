@@ -23,42 +23,40 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
 
 ### Senadores ###
 
-- `GET /senadores/`
-
-#### Response Body ####
-
-    [
-      {
-        "nombre" : String,
-        "rut" : Integer,
-        "region" : "String",
-        "circunscripcion" : Integer,
-        "telefono" : String,
-        "mail" : String,
-        "partido": {
-          "nombre" : String,
-          "siglas" : String,
-          "codigo" : Integer
-        },
-        "asistencia" : Integer,
-        "comisiones" : [
-          {
-            "nombre" : String,
-            "tipo" : String,
-            "fecha" : Date
-          }
-        ],
-        "votos" : [
-          {
-            "fecha" : String,
-            "tema" : String,
-            "voto" : String,
-            "partido" : String
-          }
-        ],
-        "sueldo" : Integer
-      }
-    ]
+| **URI** | **Request body ** |
+| ------- | ----------------- |
+| `GET /senadores/` |    [
+                          {
+                            "nombre" : String,
+                            "rut" : Integer,
+                            "region" : "String",
+                            "circunscripcion" : Integer,
+                            "telefono" : String,
+                            "mail" : String,
+                            "partido": {
+                              "nombre" : String,
+                              "siglas" : String,
+                              "codigo" : Integer
+                            },
+                            "asistencia" : Integer,
+                            "comisiones" : [
+                              {
+                                "nombre" : String,
+                                "tipo" : String,
+                                "fecha" : Date
+                              }
+                            ],
+                            "votos" : [
+                              {
+                                "fecha" : String,
+                                "tema" : String,
+                                "voto" : String,
+                                "partido" : String
+                              }
+                            ],
+                            "sueldo" : Integer
+                          }
+                        ] |
 
 
 - `/senadores/:id`
