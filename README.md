@@ -31,6 +31,9 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     <th>
       Request body
     </th>
+    <th>
+      Comentarios
+    </th>
   </tr>
   <tr>
     <td>
@@ -72,16 +75,217 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       ]
       </pre>
     </td>
+    <td>
+      - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
+      - comiiones: solo comisiones actuales
+      - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut</pre>
+    </td>
+    <td>
+      <pre>
+        {
+          "nombre" : String,
+          "rut" : Integer,
+          "region" : "String",
+          "circunscripcion" : Integer,
+          "telefono" : String,
+          "mail" : String,
+          "partido": {
+            "nombre" : String,
+            "siglas" : String,
+            "codigo" : Integer
+          },
+          "asistencia" : Integer,
+          "comisiones" : [
+            {
+              "nombre" : String,
+              "tipo" : String,
+              "fecha" : Date
+            }
+          ],
+          "votos" : [
+            {
+              "fecha" : String,
+              "tema" : String,
+              "voto" : String,
+              "partido" : String
+            }
+          ],
+          "sueldo" : Integer
+        }
+      </pre>
+    </td>
+    <td>
+      - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
+      - comiiones: solo comisiones actuales
+      - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut/votos</pre>
+    </td>
+    <td>
+      <pre>
+        [
+          {
+            "fecha" : String,
+            "tema" : String,
+            "voto" : String,
+            "partido" : String
+          }
+        ]
+      </pre>
+    </td>
+    <td>
+      - Se puede adicionar opciones de paginación
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut/comisiones</pre>
+    </td>
+    <td>
+      <pre>
+        [
+          {
+            "nombre" : String,
+            "tipo" : String,
+            "fecha" : Date,
+            "temas" : Integer,
+            "asistencia" : Integer,
+            "integrantes" : [
+              {
+                "nombre" : String,
+                "rut" : Integer,
+                "partido" : String
+              }
+            ]
+          }
+        ]
+      </pre>
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut/asistencia</pre>
+    </td>
+    <td>
+      <pre>
+      [
+        {
+          "fecha" : Date,
+          "lugar" : String,
+          "sala" : String,
+          "comision" : String,
+          "asiste" : Boolean
+        }
+      ]
+      </pre>
+    </td>
+    <td>
+      - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut/sueldo</pre>
+    </td>
+    <td>
+      <pre>
+        {
+          "dieta" : Integer,
+          "descuentos" : Integer,
+          "saldo" : Integer
+        }
+      </pre>
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/comisiones/</pre>
+    </td>
+    <td>
+      <pre>
+      [
+        {
+          "nombre" : String,
+          "tipo" : String,
+          "fecha" : Date,
+          "temas" : Integer,
+          "asistencia" : Integer,
+          "integrantes" : [
+            {
+              "nombre" : String,
+              "rut" : Integer,
+              "partido" : String
+            }
+          ]
+        }
+      ]
+      </pre>
+    </td>
+    <td>
+      - Debe incluir opciones de paginación
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/votos</pre>
+    </td>
+    <td>
+      <pre>
+        [
+          {
+            "fecha" : String,
+            "senador" : {
+              "nombre" : String,
+              "rut" : Integer
+            },
+            "tema" : String,
+            "voto" : String,
+            "partido" : String
+          }
+        ]
+      </pre>
+    </td>
+    <td>
+      - Se puede adicionar opciones de paginación
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/asistencia</pre>
+    </td>
+    <td>
+      <pre>
+      [
+        {
+          "fecha" : Date,
+          "lugar" : String,
+          "sala" : String,
+          "comision" : String,
+          "asisten" : Integer
+        }
+      ]
+      </pre>
+    </td>
+    <td>
+      - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
+      - el campo "asisten" indica el porcentaje de asistencia
+    </td>
   </tr>
 </table>
-
-
-
-- `/senadores/:id`
-- `/senadores/:id/asistencia`
-- `/senadores/:id/comisiones`
-- `/senadores/:id/patrimonio`
-- `/senadores/:id/sueldosGastos`
 
 ### Diputados ###
 
