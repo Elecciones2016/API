@@ -31,9 +31,6 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     <th>
       Request body
     </th>
-    <th>
-      Comentarios
-    </th>
   </tr>
   <tr>
     <td>
@@ -75,6 +72,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
@@ -119,6 +118,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
         }
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
@@ -141,6 +142,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
         ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - Se puede adicionar opciones de paginación
     </td>
@@ -169,9 +172,6 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
         ]
       </pre>
     </td>
-    <td>
-
-    </td>
   </tr>
   <tr>
     <td>
@@ -190,6 +190,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
     </td>
@@ -206,9 +208,6 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
           "saldo" : Integer
         }
       </pre>
-    </td>
-    <td>
-
     </td>
   </tr>
   <tr>
@@ -235,6 +234,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - Debe incluir opciones de paginación
     </td>
@@ -259,6 +260,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
         ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - Se puede adicionar opciones de paginación
     </td>
@@ -280,6 +283,8 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       ]
       </pre>
     </td>
+  </tr>
+  <tr>
     <td>
       - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
       - el campo "asisten" indica el porcentaje de asistencia
