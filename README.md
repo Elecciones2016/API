@@ -74,7 +74,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
       - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
@@ -120,7 +120,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
       - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
@@ -144,7 +144,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - Se puede adicionar opciones de paginación
     </td>
   </tr>
@@ -192,7 +192,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
     </td>
   </tr>
@@ -236,7 +236,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - Debe incluir opciones de paginación
     </td>
   </tr>
@@ -262,7 +262,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - Se puede adicionar opciones de paginación
     </td>
   </tr>
@@ -285,7 +285,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       - se considera todas las sesiones y comisiones a la que esta comprometido el senador, si es una sesion de sala, el atributo "comision" estará vacio, si es una sesión de comisión, el atributo "sala" estará vacio
       - el campo "asisten" indica el porcentaje de asistencia
     </td>
