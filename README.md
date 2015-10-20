@@ -67,7 +67,15 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
               "partido" : String
             }
           ],
-          "sueldo" : Integer
+          "sueldo" : Integer,
+          "campaign" : {
+            "gastos" : Integer,
+            "ingresos" : Integer
+          },
+          "elecciones" : {
+            "padron" : Integer,
+            "total" : Integer
+          }
         }
       ]
       </pre>
@@ -78,6 +86,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
       - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
+      - elecciones: porcentajes con que fue escogido el senador, con respecto al padron electoral, y con respecto al total de la población de su circunscripcion
     </td>
   </tr>
   <tr>
@@ -114,7 +123,16 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
               "partido" : String
             }
           ],
-          "sueldo" : Integer
+          "sueldo" : Integer,
+          "sueldo" : Integer,
+          "campaign" : {
+            "gastos" : Integer,
+            "ingresos" : Integer
+          },
+          "elecciones" : {
+            "padron" : Integer,
+            "total" : Integer
+          }
         }
       </pre>
     </td>
@@ -124,6 +142,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
       - asistencia: corresponde al porcentaje de asistencia del ultimo semestre. Solo considera sesiones ordinarias, no de comisiones.
       - comiiones: solo comisiones actuales
       - votos: ultimos 5 o 10 votos, solo considera votos de sesiones normales, no de comisiones
+      - elecciones: porcentajes con que fue escogido el senador, con respecto al padron electoral, y con respecto al total de la población de su circunscripcion
     </td>
   </tr>
   <tr>
@@ -212,6 +231,72 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
   </tr>
   <tr>
     <td>
+      <pre>GET /senadores/:rut/campaign</pre>
+    </td>
+    <td>
+      <pre>
+        {
+          "gastos" : [
+            {
+              "estado" : String,
+              "proveedor" : {
+                "rut" : Integer,
+                "nombre" : String
+              },
+              "fecha" : Date,
+              "documento" : {
+                "tipo" : String,
+                "descripcion" : String,
+                "numero" : Integer
+              },
+              "descripcion" : String,
+              "glosa" : String,
+              "monto" : Integer
+            }
+          ],
+          "ingresos" : [
+            {
+              "estado" : String,
+              "proveedor" : {
+                "rut" : Integer,
+                "nombre" : String
+              },
+              "fecha" : Date,
+              "documento" : {
+                "tipo" : String,
+                "descripcion" : String,
+                "numero" : Integer
+              },
+              "descripcion" : String,
+              "glosa" : String,
+              "monto" : Integer
+            }
+          ]
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre>GET /senadores/:rut/elecciones</pre>
+    </td>
+    <td>
+      <pre>
+        {
+          "padron" : {
+            "porcentaje" : Integer,
+            "numero" : Integer
+          },
+          "poblacion" : {
+            "porcentaje" : Integer,
+            "numero" : Integer
+          }
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <pre>GET /senadores/comisiones/</pre>
     </td>
     <td>
@@ -264,6 +349,7 @@ Para ejecutar la aplicación, hay que correr el servidor node, en el directorio 
   <tr>
     <td colspan="2">
       - Se puede adicionar opciones de paginación
+      - Se consideran los votos de cada senador para cada tema, no confundir con los votos por tema, que irán en /votos/ y /votos/:tema
     </td>
   </tr>
   <tr>
