@@ -1,5 +1,7 @@
 # RESTful api #
 
+[![Code Climate](https://codeclimate.com/github/Elecciones2016/API/badges/gpa.svg)](https://codeclimate.com/github/Elecciones2016/API)
+
 Proyecto open source que utilizá la información pública del Gobierno de Chile
 
 ## Instalación ##
